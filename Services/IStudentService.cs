@@ -38,21 +38,21 @@ namespace CollegeApp.Services
             await _context.SaveChangesAsync();
         }
 
-        public async Task UpdateStudentAsync(Student student)
-        {
-            var existingStudent = await _context.Students.FindAsync(student.StdId);
-            if (existingStudent != null)
-            {
+        //public async Task UpdateStudentAsync(Student student)
+        //{
+        //    var existingStudent = await _context.Students.FindAsync(student.StdId);
+        //    if (existingStudent != null)
+        //    {
               
-                _context.Entry(existingStudent).State = EntityState.Detached;
+        //        _context.Entry(existingStudent).State = EntityState.Detached;
 
                
-                _context.Entry(student).State = EntityState.Modified;
+        //        _context.Entry(student).State = EntityState.Modified;
 
                 
-                await _context.SaveChangesAsync();
-            }
-        }
+        //        await _context.SaveChangesAsync();
+        //    }
+        //}
 
 
         public async Task DeleteStudentAsync(int id)
