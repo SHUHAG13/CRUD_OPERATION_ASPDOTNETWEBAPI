@@ -28,8 +28,9 @@ namespace CollegeApp.Services
 
         public async Task<Student> GetStudentByIdAsync(int id)
         {
-            return await _context.Students.FindAsync(id);
+            return await _context.Students.AsNoTracking().FirstOrDefaultAsync(s => s.StdId == id);
         }
+
 
         public async Task AddStudentAsync(Student student)
         {
@@ -39,9 +40,20 @@ namespace CollegeApp.Services
 
         public async Task UpdateStudentAsync(Student student)
         {
-            _context.Students.Update(student);
-            await _context.SaveChangesAsync();
+            var existingStudent = await _context.Students.FindAsync(student.StdId);
+            if (existingStudent != null)
+            {
+              
+                _context.Entry(existingStudent).State = EntityState.Detached;
+
+               
+                _context.Entry(student).State = EntityState.Modified;
+
+                
+                await _context.SaveChangesAsync();
+            }
         }
+
 
         public async Task DeleteStudentAsync(int id)
         {

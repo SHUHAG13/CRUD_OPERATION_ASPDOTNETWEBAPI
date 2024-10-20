@@ -144,3 +144,4 @@ C:\Users\shuha\Downloads\CollegeApp-main\CollegeApp-main\CollegeApp\bin\Debug\ne
 C:\Users\shuha\Downloads\CollegeApp-main\CollegeApp-main\CollegeApp\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 C:\Users\shuha\Downloads\CollegeApp-main\CollegeApp-main\CollegeApp\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\shuha\Downloads\CollegeApp-main\CollegeApp-main\CollegeApp\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\shuha\Downloads\CollegeApp-main\CollegeApp-main\CollegeApp\obj\Debug\net8.0\CollegeApp.sourcelink.json

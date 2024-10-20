@@ -49,7 +49,7 @@ namespace CollegeApp.Controllers
             return CreatedAtAction(nameof(GetStudentById), new { id = student.StdId }, student);
         }
 
-       
+
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateStudent(int id, [FromBody] Student student)
         {
@@ -68,7 +68,7 @@ namespace CollegeApp.Controllers
             return NoContent();
         }
 
-        
+
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteStudent(int id)
         {
